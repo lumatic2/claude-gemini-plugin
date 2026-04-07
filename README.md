@@ -1,8 +1,28 @@
 # claude-gemini-plugin
 
-Delegate research, web search, and complex analysis tasks from Claude Code to the Gemini CLI.
+> Delegate research, web search, and complex analysis from Claude Code to the Gemini CLI — with background jobs, model routing, and full Windows support.
 
-Inspired by [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc), this plugin lets Claude Code call Gemini as a worker agent for tasks where Gemini's long context window and search integration excel.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)](#requirements)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-2.1%2B-purple)](https://docs.claude.com/en/docs/claude-code)
+
+Inspired by [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc), this is the Gemini-side counterpart: a native Claude Code plugin that lets Claude delegate work to Gemini as a worker agent.
+
+## Why this plugin?
+
+Several Gemini integrations exist for Claude Code already. Here's where this one is different:
+
+| Feature | This plugin | Typical MCP-server alternatives |
+|---|---|---|
+| **Cost** | **Free** — uses `gemini` CLI's OAuth (works with Gemini Advanced subscription) | Pay-per-token via raw Gemini API |
+| **Architecture** | Native Claude Code plugin (Node.js) — no extra server process | Separate MCP server (often Python) |
+| **Background jobs** | ✅ Fire-and-forget with `/status` `/result` `/cancel` | ❌ Synchronous only |
+| **Model routing** | ✅ `--model flash` / `--model pro` | ❌ Usually a single fixed model |
+| **Windows support** | ✅ First-class (NVM fallback, dynamic binary discovery) | ⚠️ Unix-focused |
+| **Dependencies** | Just Node.js (already required by Claude Code) | Python + pip |
+| **Setup** | `claude plugin install` (one command) | clone + install.sh + API key config |
+
+If you're already using `gemini` CLI with your Google account, this plugin gives you Gemini-as-a-worker inside Claude Code with **zero additional cost** and **zero new dependencies**.
 
 ## Features
 
