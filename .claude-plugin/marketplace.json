@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-gemini-plugin",
+  "owner": {
+    "name": "lumatic2"
+  },
+  "metadata": {
+    "description": "Delegate research, web search, and complex analysis from Claude Code to the Gemini CLI.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "gemini",
+      "description": "Delegate research, web search, and complex analysis to Gemini CLI from Claude Code with background jobs, model routing, and full Windows support.",
+      "version": "1.0.0",
+      "author": {
+        "name": "lumatic2"
+      },
+      "source": "./plugins/gemini",
+      "homepage": "https://github.com/lumatic2/claude-gemini-plugin",
+      "license": "MIT",
+      "category": "ai-delegation"
+    }
+  ]
+}
