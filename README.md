@@ -1,5 +1,9 @@
 # claude-gemini-plugin
 
+Claude Code 안에서 Gemini CLI를 research/review/rescue 작업자처럼 호출하는 플러그인입니다. Google 계정으로 인증된 `gemini` CLI를 그대로 사용하므로 별도 Gemini API 키나 MCP 서버 없이 백그라운드 작업, 모델 라우팅, 결과 조회 흐름을 제공합니다.
+
+This plugin lets Claude Code delegate research, review, and rescue tasks to the Gemini CLI, with background jobs, model routing, and result retrieval.
+
 > Delegate research, web search, and complex analysis from Claude Code to the Gemini CLI — with background jobs, model routing, and full Windows support.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
